@@ -29,7 +29,7 @@ const Nav: React.FC<Props> = (props) => {
                 ? "bg-black border-white"
                 : "bg-[#504b48] border-white"
             } cursor-pointer hover:border-b-2 hover:scale-105`}
-            href={"/about"}
+            href={`/about/${props.sex}`}
           >
             <h3>About</h3>
           </Link>
@@ -39,7 +39,7 @@ const Nav: React.FC<Props> = (props) => {
                 ? "bg-black border-white"
                 : "bg-[#504b48] border-white"
             } cursor-pointer hover:border-b-2 hover:scale-105`}
-            href={"/services"}
+            href={`/services/${props.sex}`}
           >
             <h3>Services</h3>
           </Link>
@@ -49,7 +49,7 @@ const Nav: React.FC<Props> = (props) => {
                 ? "bg-black border-white"
                 : "bg-[#504b48] border-white"
             } cursor-pointer hover:border-b-2 hover:scale-105`}
-            href={"/gallery"}
+            href={`/gallery/${props.sex}`}
           >
             <h3>Gallery</h3>
           </Link>
@@ -59,14 +59,14 @@ const Nav: React.FC<Props> = (props) => {
                 ? "bg-black border-white"
                 : "bg-[#504b48] border-white"
             } cursor-pointer hover:border-b-2 hover:scale-105`}
-            href={"/contact"}
+            href={`/contact/${props.sex}`}
           >
             <h3>Contact</h3>
           </Link>
         </div>
         <Link
           className={`cursor-pointer text-xs font-semibold p-2 bg-white rounded-lg md:text-black hover:scale-95 hover:opacity-80 hidden md:flex mr-0 ml-auto`}
-          href={"/booking"}
+          href={`/booking/${props.sex}`}
         >
           <h2>Book An Appointment</h2>
         </Link>
@@ -119,7 +119,7 @@ const Nav: React.FC<Props> = (props) => {
                 ? "bg-black border-white"
                 : "bg-[#504b48] border-white"
             } cursor-pointer p-6 md:px-8 lg:px-10 hover:border-b-2 hover:scale-105`}
-            href={"/about"}
+            href={`/about/${props.sex}`}
           >
             <h3>About</h3>
           </Link>
@@ -129,7 +129,7 @@ const Nav: React.FC<Props> = (props) => {
                 ? "bg-black border-white"
                 : "bg-[#504b48] border-white"
             } cursor-pointer p-2 hover:border-b-2 hover:scale-105`}
-            href={"/services"}
+            href={`/services/${props.sex}`}
           >
             <h3>Services</h3>
           </Link>
@@ -139,7 +139,7 @@ const Nav: React.FC<Props> = (props) => {
                 ? "bg-black border-white"
                 : "bg-[#504b48] border-white"
             } cursor-pointer p-2 hover:border-b-2 hover:scale-105`}
-            href={"/gallery"}
+            href={`/gallery/${props.sex}`}
           >
             <h3>Gallery</h3>
           </Link>
@@ -149,7 +149,7 @@ const Nav: React.FC<Props> = (props) => {
                 ? "bg-black border-white"
                 : "bg-[#504b48] border-white"
             } cursor-pointer p-2 hover:border-b-2 hover:scale-105`}
-            href={"/contact"}
+            href={`/contact/${props.sex}`}
           >
             <h3>Contact</h3>
           </Link>
@@ -160,7 +160,7 @@ const Nav: React.FC<Props> = (props) => {
               ? "bg-black border-white"
               : "bg-[#504b48] border-white"
           } w-full cursor-pointer p-2 hover:border-2 hover:scale-105`}
-          href={"/booking"}
+          href={`/booking/${props.sex}`}
         >
           <h2>Book An Appointment</h2>
         </Link>

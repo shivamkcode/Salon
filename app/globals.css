@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+
+*::-webkit-scrollbar {
+    background: rgba(0, 0, 0, 0.1);
+    width: 5px;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #4a4a4a; 
+    border-radius: 20px; 
+  }
+
+  *::-webkit-scrollbar-track{
+    background: transparent;
+  }
+
+
 .nav-options-open {
     opacity: 1;
     transform: translateX(0);
@@ -31,6 +47,8 @@
     -ms-overflow-style: none;  
     scrollbar-width: none; 
   }
+
+
 
   @keyframes scroll {
     0% {
