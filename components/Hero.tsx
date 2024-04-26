@@ -5,7 +5,7 @@ import { Props } from "./Nav";
 const Hero: React.FC<Props> = (props) => {
     const male = props.sex === 'male'
   return (
-    <section className={`${male ? 'bg-[url("../public/img/Hero_men.jpg")]' : "bg-[url('https://www.wallpapertip.com/wmimgs/13-132200_girl-red-hair-data-src-beauty-salon-images.jpg')]"} bg-cover bg-no-repeat h-screen bg-center mt-16 lg:mt-16 text-white`}>
+    <section className={`${male ? 'bg-[url("../public/img/Hero_men.jpg")]' : "bg-[url('https://www.wallpapertip.com/wmimgs/13-132200_girl-red-hair-data-src-beauty-salon-images.jpg')]"} bg-cover bg-no-repeat h-screen lg:h-[60vw] bg-center mt-14 md:rounded-br-[150px] lg:mt-16 text-white`}>
       <div className={`flex flex-col gap-6 md:gap-8 lg:gap-10 h-full px-10 md:px-16 lg:px-28 ${male ?  'justify-end text-center items-center pb-10 w-[100%] md:w-[80%] lg:w-[70%] ' : 'justify-center w-[300px] md:w-[400px] lg:w-[600px]'}`}>
         <h1 className="text-4xl lg:text-6xl font-serif font-semibold">
           {male ? 'Style and Tradition in every Haircut' : 'Blonde & Highlight'}
@@ -17,7 +17,7 @@ const Hero: React.FC<Props> = (props) => {
             <span className="text-3xl md:text-4xl ">-20%</span> for the first classic {male ? 'haircut' : 'hair coloring'}
           </h4>
           <Link
-            className={`bg-white text-black text-center font-bold rounded-lg border-pink-300 cursor-pointer p-2 hover:border-2 hover:scale-95`}
+            className={`bg-white text-black text-center font-bold rounded-lg border-pink-300 cursor-pointer p-2 hover:scale-95`}
             href={"/booking"}
           >
             <h2>Book An Appointment</h2>

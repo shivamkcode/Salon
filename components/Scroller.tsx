@@ -33,12 +33,14 @@ const HorizontalScroll: React.FC<ReviewsProps> = ({
 
       const scrollWidth = scrollElement.scrollWidth;
 
-      let scrollPos = 0;
+      let scrollPos = direction === 'right' ? 0 : scrollWidth;
       const scrollInterval = setInterval(() => {
         scrollPos += direction === "right" ? currentSpeed : -currentSpeed;
 
         if (scrollPos >= scrollWidth) {
           scrollPos = 0;
+        } else if (scrollPos <= 0) {
+          scrollPos = scrollWidth
         }
 
         scrollElement.scrollLeft = scrollPos;
@@ -54,10 +56,10 @@ const HorizontalScroll: React.FC<ReviewsProps> = ({
   }, []);
 
   return (
-    <div className="py-10">
+    <div className="">
       <div
         ref={scrollRef}
-        className="no-scrollbar overflow-x-scroll mask bg-gradient-to-r from-black to-[#706f6f38]"
+        className="no-scrollbar overflow-x-scroll "
       >
         <div className="flex text-left cursor-grab">
           {reviews.map((review) => (
@@ -98,7 +100,7 @@ const HorizontalScroll: React.FC<ReviewsProps> = ({
           {reviews.map((review) => (
             <div
               key={review.id}
-              className="min-w-[624px] flex gap-4 h-72 p-6 mr-4 border border-gray-500-2"
+              className="min-w-[624px] flex gap-4 h-80 p-10 mr-4 border border-gray-500-2"
             >
               <div className="flex flex-col gap-2">
                 <p className="font-bold text-3xl">{review.author}</p>
@@ -130,6 +132,7 @@ const HorizontalScroll: React.FC<ReviewsProps> = ({
               </div>
             </div>
           ))}
+          
           
         </div>
       </div>

@@ -4,7 +4,7 @@ import { Props } from "./Nav";
 
 const InfoSection: React.FC<Props> = (props) => {
   return (
-    <div className={`flex flex-col md:flex-row ${props.sex === 'male' ? 'bg-black opacity-95 text-white' : ''} gap-8 p-6 md:p-8 lg:p-10 justify-center md:justify-evenly items-center md:items-start text-center`}>
+    <div className={`flex flex-col md:flex-row ${props.sex === 'male' ? 'bg-black opacity-95 text-white' : ''} gap-8 p-6 md:p-8 md:py-14 lg:p-10 lg:py-20 justify-center md:justify-evenly items-center md:items-start text-center`}>
       <div className="flex flex-col gap-2 md:gap-3 lg:gap-4  items-center">
         <svg className="w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12"
           width="24"
