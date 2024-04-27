@@ -46,8 +46,8 @@ export default function Home() {
       {gender && (
         <main
           className={`${
-            gender === "male" ? "bg-black opacity-95 " : "bg-black bg-opacity-80"
-          } sm:text-center text-white`}
+            gender === "male" ? "bg-black opacity-95 " : "bg-[#483C32]"
+          } sm:text-center text-[#D1C6BD]`}
         >
           <Nav sex={gender} />
           <Hero sex={gender} />
