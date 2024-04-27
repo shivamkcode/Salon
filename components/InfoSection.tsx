@@ -4,7 +4,8 @@ import { Props } from "./Nav";
 
 const InfoSection: React.FC<Props> = (props) => {
   return (
-    <div className={`flex flex-col md:flex-row ${props.sex === 'male' ? 'bg-black opacity-95 text-white' : ''} gap-8 p-6 md:p-8 md:py-14 lg:p-10 lg:py-20 justify-center md:justify-evenly items-center md:items-start text-center`}>
+    <div className={`flex flex-col md:flex-row ${props.sex === 'male' ? 'bg-black opacity-95 text-white' : 'bg-[#DD1619] opacity-95'} gap-8 p-6 md:p-8 md:py-14 lg:p-10 lg:py-20 justify-center md:justify-evenly items-center md:items-start text-center contain-content`}>
+      <div className={`absolute ${props.sex === 'male' ? 'bg-[#d9d9d916]' : 'bg-[#75000c65]'} rounded-full blur-[100px] h-[420px] left-[calc(50.01966181675189% - 1956px / 2)] pointer-events-none top-[calc(52.67034990791899% - 420px / 2)] rotate-[-7deg] w-[1956px] -z-10`} />
       <div className="flex flex-col gap-2 md:gap-3 lg:gap-4  items-center">
         <svg className="w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12"
           width="24"
@@ -29,9 +30,9 @@ const InfoSection: React.FC<Props> = (props) => {
           />
         </svg>
         <h2 className="font-bold text-2xl lg:text-4xl uppercase ">Location</h2>
-        <h3>Address will go here</h3>
+        <h3 className="text-[#fff]">Address will go here</h3>
         <Link href={"/"}>See On Map</Link>
-      </div>
+      </div> 
 
       <div className="flex flex-col gap-2 md:gap-3 lg:gap-4  items-center">
         <svg className="w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12"
@@ -57,9 +58,9 @@ const InfoSection: React.FC<Props> = (props) => {
           />
         </svg>
         <h2 className="font-bold text-2xl lg:text-4xl uppercase">Opening Hours</h2>
-        <h3>Mon to Fri: 9.00am - 8.30pm</h3>
-        <h3>Sat: 10.00am - 6.30pm</h3>
-        <h3>Sun: Closed</h3>
+        <h3 className="text-[#fff]">Mon to Fri: 9.00am - 8.30pm</h3>
+        <h3 className="text-[#fff]">Sat: 10.00am - 6.30pm</h3>
+        <h3 className="text-[#fff]">Sun: Closed</h3>
       </div>
 
       <div className="flex flex-col gap-2 md:gap-3 lg:gap-4  items-center">
@@ -79,8 +80,8 @@ const InfoSection: React.FC<Props> = (props) => {
           />
         </svg>
         <h2 className="font-bold text-2xl lg:text-4xl uppercase">Contact</h2>
-        <h3>Phone number</h3>
-        <h3>Email</h3>
+        <h3 className="text-[#fff]">Phone number</h3>
+        <h3 className="text-[#fff]">Email</h3>
       </div>
     </div>
   );

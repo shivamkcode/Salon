@@ -44,7 +44,7 @@ const HorizontalScroll: React.FC<ReviewsProps> = ({
         }
 
         scrollElement.scrollLeft = scrollPos;
-      }, 30);
+      }, 20);
 
       return () => {
         clearInterval(scrollInterval);
@@ -74,7 +74,7 @@ const HorizontalScroll: React.FC<ReviewsProps> = ({
                     <Image
                       style={{
                         filter:
-                          "invert(40%) sepia(150%) saturate(100%) hue-rotate(345deg) brightness(81%) contrast(108%)",
+                          "invert(40%) sepia(150%) saturate(100%) hue-rotate(345deg) brightness(100%) contrast(178%)",
                       }}
                       key={index}
                       src={Star}
@@ -84,7 +84,7 @@ const HorizontalScroll: React.FC<ReviewsProps> = ({
                     />
                   ))}
                 </div>
-                <p>{review.text}</p>
+                <p className="text-white">{review.text}</p>
               </div>
               <div className="min-w-60 h-60 overflow-hidden relative border border-white">
                 <Image
@@ -109,7 +109,7 @@ const HorizontalScroll: React.FC<ReviewsProps> = ({
                     <Image
                       style={{
                         filter:
-                          "invert(40%) sepia(150%) saturate(100%) hue-rotate(345deg) brightness(81%) contrast(108%)",
+                          "invert(40%) sepia(150%) saturate(100%) hue-rotate(345deg) brightness(100%) contrast(178%)",
                       }}
                       key={index}
                       src={Star}
@@ -119,7 +119,7 @@ const HorizontalScroll: React.FC<ReviewsProps> = ({
                     />
                   ))}
                 </div>
-                <p>{review.text}</p>
+                <p className="text-white">{review.text}</p>
               </div>
               <div className="min-w-60 h-60 overflow-hidden relative border border-white">
                 <Image

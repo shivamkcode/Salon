@@ -10,7 +10,7 @@ const Reviews: React.FC<Props> = (props) => {
         <h2 className="font-bold text-3xl lg:text-5xl uppercase">
           Our Customer`s Opinion
         </h2>
-        <h5>
+        <h5 className="text-white">
           Find out what our customers think about{" "}
           {props.sex === "male" ? "À-ONÈ" : "Ayesha"}. Their words are authentic
           testimonies of the experiences lived in our barber chair. Learn how
@@ -22,7 +22,7 @@ const Reviews: React.FC<Props> = (props) => {
       <div
         className={`my-10 flex flex-col gap-10 mask contain-content`}
       >
-        <div className={`absolute ${props.sex === 'male' ? 'bg-[#d9d9d916]' : 'bg-[#ff5f1a16]'} bg-[#d9d9d916] rounded-full blur-[100px] h-[420px] left-[calc(50.01966181675189% - 1956px / 2)] pointer-events-none top-[calc(52.67034990791899% - 420px / 2)] rotate-[-7deg] w-[1956px] z-0`} />
+        <div className={`absolute ${props.sex === 'male' ? 'bg-[#d9d9d916]' : 'bg-[#75000ca9]'} rounded-full blur-[100px] h-[420px] left-[calc(50.01966181675189% - 1956px / 2)] pointer-events-none top-[calc(52.67034990791899% - 420px / 2)] rotate-[-7deg] w-[1956px] -z-10`} />
         <HorizontalScroll reviews={reviewsMen} direction="left" />
         <HorizontalScroll reviews={reviewsWomen} />
       </div>

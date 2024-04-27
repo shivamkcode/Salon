@@ -16,7 +16,7 @@ const Nav: React.FC<Props> = (props) => {
         className={`flex md:gap-2 fixed w-full top-0 left-0 justify-between items-center p-4 md:px-8 lg:px-10 sm:text-lg md:text-xl lg:text-2xl z-40 ${
           props.sex == "male"
             ? "bg-black text-white"
-            : " bg-[#E8D9C5] text-black"
+            : " bg-[#9B0F11] text-[#F6CC6F]"
         }`}
       >
         <Link className="z-50" href={"/"}>
@@ -29,7 +29,7 @@ const Nav: React.FC<Props> = (props) => {
             className={`${
               props.sex === "male"
                 ? "bg-black border-white"
-                : "bg-[#E8D9C5] border-white"
+                : "bg-[#9B0F11] border-white"
             } cursor-pointer hover:border-b-2 hover:scale-105`}
             href={`/about/${props.sex}`}
           >
@@ -39,7 +39,7 @@ const Nav: React.FC<Props> = (props) => {
             className={`${
               props.sex === "male"
                 ? "bg-black border-white"
-                : "bg-[#E8D9C5] border-white"
+                : "bg-[#9B0F11] border-white"
             } cursor-pointer hover:border-b-2 hover:scale-105`}
             href={`/services/${props.sex}`}
           >
@@ -49,7 +49,7 @@ const Nav: React.FC<Props> = (props) => {
             className={`${
               props.sex === "male"
                 ? "bg-black border-white"
-                : "bg-[#E8D9C5] border-white"
+                : "bg-[#9B0F11] border-white"
             } cursor-pointer hover:border-b-2 hover:scale-105`}
             href={`/gallery/${props.sex}`}
           >
@@ -59,7 +59,7 @@ const Nav: React.FC<Props> = (props) => {
             className={`${
               props.sex === "male"
                 ? "bg-black border-white"
-                : "bg-[#E8D9C5] border-white"
+                : "bg-[#9B0F11] border-white"
             } cursor-pointer hover:border-b-2 hover:scale-105`}
             href={`/contact/${props.sex}`}
           >
@@ -79,7 +79,7 @@ const Nav: React.FC<Props> = (props) => {
                 filter:
                   props.sex === "male"
                     ? "invert(48%) sepia(0%) saturate(0%) hue-rotate(86deg) brightness(1000%) contrast(119%)"
-                    : "",
+                    : "invert(60%) sepia(100%) saturate(150%) hue-rotate(350deg) brightness(100%) contrast(189%)",
               }}
               className="w-full md:hidden cursor-pointer hover:scale-105"
               onClick={() => setIsOpen(!isOpen)}
@@ -95,7 +95,7 @@ const Nav: React.FC<Props> = (props) => {
               className={`font-bold md:hidden text-base ${
                 props.sex === "male"
                   ? "bg-white text-black"
-                  : "bg-black opacity-85 text-[#E8D9C5]"
+                  : "bg-[#F6CC6F] opacity-85 text-[#9B0F11]"
               } rounded-full p-1 h-8 w-8 text-center cursor-pointer hover:scale-105`}
             >
               X
@@ -108,20 +108,19 @@ const Nav: React.FC<Props> = (props) => {
           isOpen
             ? `fixed top-14 left-0 ${
                 props.sex === "female"
-                  ? "bg-[#E8D9C5] text-black"
+                  ? "bg-[#9B0F11] text-[#F6CC6F]"
                   : "bg-black text-white"
               } w-full items-center flex flex-col gap-5 py-6 text-center font-bold p-6 md:px-8 lg:px-10 z-10 nav-options-open border-b-2 border-white sm:text-lg md:text-xl lg:text-2xl`
             : `absolute top-14 left-0 ${
-                props.sex === "female" ? "bg-[#E8D9C5]" : "bg-black text-white"
-              } w-full items-center flex flex-col gap-5 py-6 text-center font-bold px-3 z-10 nav-options-closed`
-        }`}
+                props.sex === "female" ? "bg-[#9B0F11]" : "bg-black text-white"
+              } w-full items-center flex flex-col gap-5 py-6 text-center font-bold px-3 nav-options-closed z-10 `}`}
       >
         <div className="flex flex-col gap-5 w-full">
           <Link
             className={`${
               props.sex === "male"
                 ? "bg-black border-white"
-                : "bg-[#E8D9C5] border-white"
+                : "bg-[#9B0F11] border-white"
             } cursor-pointer p-2 hover:border-b-2 hover:scale-105`}
             href={`/about/${props.sex}`}
           >
@@ -131,7 +130,7 @@ const Nav: React.FC<Props> = (props) => {
             className={`${
               props.sex === "male"
                 ? "bg-black border-white"
-                : "bg-[#E8D9C5] border-white"
+                : "bg-[#9B0F11] border-white"
             } cursor-pointer p-2 hover:border-b-2 hover:scale-105`}
             href={`/services/${props.sex}`}
           >
@@ -141,7 +140,7 @@ const Nav: React.FC<Props> = (props) => {
             className={`${
               props.sex === "male"
                 ? "bg-black border-white"
-                : "bg-[#E8D9C5] border-white"
+                : "bg-[#9B0F11] border-white"
             } cursor-pointer p-2 hover:border-b-2 hover:scale-105`}
             href={`/gallery/${props.sex}`}
           >
@@ -151,7 +150,7 @@ const Nav: React.FC<Props> = (props) => {
             className={`${
               props.sex === "male"
                 ? "bg-black border-white"
-                : "bg-[#E8D9C5] border-white"
+                : "bg-[#9B0F11] border-white"
             } cursor-pointer p-2 hover:border-b-2 hover:scale-105`}
             href={`/contact/${props.sex}`}
           >
@@ -162,7 +161,7 @@ const Nav: React.FC<Props> = (props) => {
           className={`${
             props.sex === "male"
               ? "bg-black border-white"
-              : "bg-[#E8D9C5] border-white"
+              : "bg-[#9B0F11] border-white"
           } w-full cursor-pointer p-2 hover:border-2 hover:scale-105`}
           href={`/booking/${props.sex}`}
         >
