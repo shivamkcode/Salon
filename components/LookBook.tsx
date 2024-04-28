@@ -38,7 +38,7 @@ const LookBook: React.FC<Props> = (props) => {
         <div
           className={`${
             props.sex === "male"
-              ? "bg-[url(https://res.cloudinary.com/ddmxmmot6/image/upload/v1714133319/IMG_COM_20240426_0759_57_2421_mr592d.jpg)]"
+              ? "bg-[url(https://res.cloudinary.com/ddmxmmot6/image/upload/v1714326088/firza-pratama-zRshOvj0K4o-unsplash_w7h9vf.jpg)]"
               : "bg-[url(https://res.cloudinary.com/ddmxmmot6/image/upload/v1714138853/six_djsouq.jpg)]"
           } w-[100%] h-[90vw] sm:w-[48%] sm:h-[45vw] bg-cover bg-no-repeat bg-center border-gray-600 border filter grayscale hover:grayscale-0 transition duration-500 `}
         />

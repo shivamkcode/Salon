@@ -13,7 +13,7 @@ const Nav: React.FC<Props> = (props) => {
   return (
     <>
       <nav
-        className={`flex md:gap-2 fixed w-full top-0 left-0 justify-between items-center p-4 md:px-8 lg:px-10 sm:text-lg md:text-xl lg:text-2xl z-40 ${
+        className={`flex md:gap-2 fixed w-full top-0 left-0 justify-between items-center p-6 md:px-8 lg:px-10 sm:text-lg md:text-xl lg:text-2xl z-40 ${
           props.sex == "male"
             ? "bg-black text-white"
             : " bg-[#9B0F11] text-[#F6CC6F]"

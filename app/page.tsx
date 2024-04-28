@@ -3,48 +3,16 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import InfoSection from "@/components/InfoSection";
 import LookBook from "@/components/LookBook";
-import Nav from "@/components/Nav";
 import Reviews from "@/components/Reviews";
 import Services from "@/components/Services";
-import Image from "next/image";
-import { useState } from "react";
+import { useContext } from "react";
+import { GenderContext } from "./layout";
 
 export default function Home() {
-  const [gender, setGender] = useState<string>("both");
+  const gender = useContext(GenderContext);
+  console.log(gender);
   return (
     <>
-      {gender === "both" && (
-        <>
-          <div className="h-full w-full bg-black opacity-70 filter backdrop-blur-3xl fixed top-0 left-0 z-50" />
-          <div className="bg-white fixed w-[80vw] sm:w-[500px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg flex flex-col gap-2 p-8 text-center z-50">
-            <div className="uppercase tracking-wider text-2xl md:text-4xl lg:text-5xl text-black opacity-80 font-semibold">
-              Welcome to our site
-            </div>
-            <p className=" text-gray-500 text-sm">
-              Select your gender for a rich and tailored experience
-            </p>
-
-            <div className="flex mt-4 justify-evenly text-gray-500">
-              <div className="flex flex-col gap-4 ">
-                <div
-                  onClick={() => setGender("male")}
-                  className="bg-[url(https://res.cloudinary.com/ddmxmmot6/image/upload/v1714155716/Male-min_qeny5d.png)] w-20 sm:w-28
-                  sm:h-28 h-20 bg-contain rounded-lg cursor-pointer filter grayscale hover:grayscale-0 transition duration-500"
-                />
-                <h5 className="font-bold">Men</h5>
-              </div>
-              <div className="flex flex-col gap-4 ">
-                <div
-                  onClick={() => setGender("female")}
-                  className="bg-[url(https://res.cloudinary.com/ddmxmmot6/image/upload/v1714155716/Female-min_vhhjoq.png)] w-20 sm:w-28
-                  sm:h-28 h-20 bg-contain rounded-lg cursor-pointer filter grayscale hover:grayscale-0 transition duration-500"
-                />
-                <h5 className="font-bold">Women</h5>
-              </div>
-            </div>
-          </div>
-        </>
-      )}
       {gender && (
         <main
           className={`${
@@ -53,7 +21,6 @@ export default function Home() {
               : "bg-[#DD1619] text-[#F6CC6F]"
           } sm:text-center `}
         >
-          <Nav sex={gender} />
           <Hero sex={gender} />
           <InfoSection sex={gender} />
           <div className="bg-[#ffffff1c] p-6 md:p-8 lg:p-10 md:py-10 lg:py-16 flex flex-col md:flex-row gap-4">
@@ -93,7 +60,13 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className={`flex-1 min-h-[100vw] sm:min-h-[50vw] md:min-h-0 ${gender === 'male' ? 'bg-[url(https://res.cloudinary.com/ddmxmmot6/image/upload/v1714133319/IMG_COM_20240426_0803_56_5331_zigxgw.jpg)]' : 'bg-[url(https://res.cloudinary.com/ddmxmmot6/image/upload/v1714233375/shari-sirotnak-oM5YoMhTf8E-unsplash_pje8rw.jpg)] opacity-80'} bg-cover bg-no-repeat bg-center border filter grayscale hover:grayscale-0 transition duration-500`}>
+            <div
+              className={`flex-1 min-h-[100vw] sm:min-h-[50vw] md:min-h-0 ${
+                gender === "male"
+                  ? "bg-[url(https://res.cloudinary.com/ddmxmmot6/image/upload/v1714133319/IMG_COM_20240426_0803_56_5331_zigxgw.jpg)]"
+                  : "bg-[url(https://res.cloudinary.com/ddmxmmot6/image/upload/v1714233375/shari-sirotnak-oM5YoMhTf8E-unsplash_pje8rw.jpg)] opacity-80"
+              } bg-cover bg-no-repeat bg-center border filter grayscale hover:grayscale-0 transition duration-500`}
+            >
               {/* <Image 
                 className="w-full h-full border"
                 src={
