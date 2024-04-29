@@ -13,10 +13,10 @@ const Nav: React.FC<Props> = (props) => {
   return (
     <>
       <nav
-        className={`flex md:gap-2 fixed w-full top-0 left-0 justify-between items-center p-6 md:px-8 lg:px-10 sm:text-lg md:text-xl lg:text-2xl z-40 ${
+        className={`flex md:gap-2 fixed w-full top-0 left-0 justify-between items-center p-6 md:px-8 lg:px-10 font-bold z-40 ${
           props.sex == "male"
             ? "bg-black text-white"
-            : " bg-[#9B0F11] text-[#F6CC6F]"
+            : " bg-[#FCDEC0] text-[#483C32] opacity-90 backdrop-blur-sm"
         }`}
       >
         <Link className="z-50" href={"/"}>
@@ -29,7 +29,7 @@ const Nav: React.FC<Props> = (props) => {
             className={`${
               props.sex === "male"
                 ? "bg-black border-white"
-                : "bg-[#9B0F11] border-white"
+                : "bg-[#FCDEC0] border-white"
             } cursor-pointer hover:border-b-2 hover:scale-105`}
             href={`/about/${props.sex}`}
           >
@@ -39,7 +39,7 @@ const Nav: React.FC<Props> = (props) => {
             className={`${
               props.sex === "male"
                 ? "bg-black border-white"
-                : "bg-[#9B0F11] border-white"
+                : "bg-[#FCDEC0] border-white"
             } cursor-pointer hover:border-b-2 hover:scale-105`}
             href={`/services/${props.sex}`}
           >
@@ -49,7 +49,7 @@ const Nav: React.FC<Props> = (props) => {
             className={`${
               props.sex === "male"
                 ? "bg-black border-white"
-                : "bg-[#9B0F11] border-white"
+                : "bg-[#FCDEC0] border-white"
             } cursor-pointer hover:border-b-2 hover:scale-105`}
             href={`/gallery/${props.sex}`}
           >
@@ -59,7 +59,7 @@ const Nav: React.FC<Props> = (props) => {
             className={`${
               props.sex === "male"
                 ? "bg-black border-white"
-                : "bg-[#9B0F11] border-white"
+                : "bg-[#FCDEC0] border-white"
             } cursor-pointer hover:border-b-2 hover:scale-105`}
             href={`/contact/${props.sex}`}
           >
@@ -67,10 +67,10 @@ const Nav: React.FC<Props> = (props) => {
           </Link>
         </div>
         <Link
-          className={`cursor-pointer text-xs font-semibold p-2 bg-white rounded-lg md:text-black hover:scale-95 hover:opacity-80 hidden md:flex mr-0 ml-auto`}
-          href={`/booking/${props.sex}`}
+          className={`cursor-pointer p-2 bg-white rounded-lg font-normal md:text-black hover:scale-95 hover:opacity-80 hidden md:flex mr-0 ml-auto`}
+          href={`/booking`}
         >
-          <h2>Book An Appointment</h2>
+          <h2 className="px-2">Book An Appointment</h2>
         </Link>
         <div className="z-50">
           {!isOpen && (
@@ -95,7 +95,7 @@ const Nav: React.FC<Props> = (props) => {
               className={`font-bold md:hidden text-base ${
                 props.sex === "male"
                   ? "bg-white text-black"
-                  : "bg-[#F6CC6F] opacity-85 text-[#9B0F11]"
+                  : "bg-[#483C32] opacity-85 text-[#FCDEC0]"
               } rounded-full p-1 h-8 w-8 text-center cursor-pointer hover:scale-105`}
             >
               X
@@ -108,20 +108,22 @@ const Nav: React.FC<Props> = (props) => {
           isOpen
             ? `fixed top-14 left-0 ${
                 props.sex === "female"
-                  ? "bg-[#9B0F11] text-[#F6CC6F]"
+                  ? "bg-[#FCDEC0] text-[#483C32]"
                   : "bg-black text-white"
               } w-full items-center flex flex-col gap-5 py-6 text-center font-bold p-6 md:px-8 lg:px-10 z-10 nav-options-open border-b-2 border-white sm:text-lg md:text-xl lg:text-2xl`
             : `absolute top-14 left-0 ${
-                props.sex === "female" ? "bg-[#9B0F11]" : "bg-black text-white"
-              } w-full items-center flex flex-col gap-5 py-6 text-center font-bold px-3 nav-options-closed z-10 `}`}
+                props.sex === "female" ? "bg-[#FCDEC0]" : "bg-black text-white"
+              } w-full items-center flex flex-col gap-5 py-6 text-center font-bold px-3 nav-options-closed z-10 `
+        }`}
       >
         <div className="flex flex-col gap-5 w-full">
           <Link
             className={`${
               props.sex === "male"
                 ? "bg-black border-white"
-                : "bg-[#9B0F11] border-white"
+                : "bg-[#FCDEC0] border-white"
             } cursor-pointer p-2 hover:border-b-2 hover:scale-105`}
+            onClick={() => setIsOpen(false)}
             href={`/about/${props.sex}`}
           >
             <h3>About</h3>
@@ -130,8 +132,9 @@ const Nav: React.FC<Props> = (props) => {
             className={`${
               props.sex === "male"
                 ? "bg-black border-white"
-                : "bg-[#9B0F11] border-white"
+                : "bg-[#FCDEC0] border-white"
             } cursor-pointer p-2 hover:border-b-2 hover:scale-105`}
+            onClick={() => setIsOpen(false)}
             href={`/services/${props.sex}`}
           >
             <h3>Services</h3>
@@ -140,8 +143,9 @@ const Nav: React.FC<Props> = (props) => {
             className={`${
               props.sex === "male"
                 ? "bg-black border-white"
-                : "bg-[#9B0F11] border-white"
+                : "bg-[#FCDEC0] border-white"
             } cursor-pointer p-2 hover:border-b-2 hover:scale-105`}
+            onClick={() => setIsOpen(false)}
             href={`/gallery/${props.sex}`}
           >
             <h3>Gallery</h3>
@@ -150,20 +154,22 @@ const Nav: React.FC<Props> = (props) => {
             className={`${
               props.sex === "male"
                 ? "bg-black border-white"
-                : "bg-[#9B0F11] border-white"
+                : "bg-[#FCDEC0] border-white"
             } cursor-pointer p-2 hover:border-b-2 hover:scale-105`}
-            href={`/contact/${props.sex}`}
+            onClick={() => setIsOpen(false)}
+            href={`/contact/`}
           >
             <h3>Contact</h3>
           </Link>
         </div>
         <Link
+          onClick={() => setIsOpen(false)}
           className={`${
             props.sex === "male"
               ? "bg-black border-white"
-              : "bg-[#9B0F11] border-white"
+              : "bg-[#FCDEC0] border-white"
           } w-full cursor-pointer p-2 hover:border-2 hover:scale-105`}
-          href={`/booking/${props.sex}`}
+          href={`/booking`}
         >
           <h2>Book An Appointment</h2>
         </Link>

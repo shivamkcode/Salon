@@ -10,7 +10,7 @@ const Hero: React.FC<Props> = (props) => {
         male
           ? 'bg-[url("../public/img/Hero_men.jpg")]'
           : "bg-[url('https://www.wallpapertip.com/wmimgs/13-132200_girl-red-hair-data-src-beauty-salon-images.jpg')]"
-      } bg-cover bg-no-repeat h-screen lg:h-[60vw] bg-center mt-14 md:rounded-br-[150px] lg:mt-16 text-white`}
+      } bg-cover bg-no-repeat h-screen lg:h-[60vw] bg-center mt-20 md:rounded-br-[150px] lg:mt-[88px] text-white`}
     >
       <div
         className={`flex flex-col gap-6 md:gap-8 lg:gap-10 h-full px-10 md:px-16 lg:px-28 ${

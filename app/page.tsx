@@ -18,7 +18,7 @@ export default function Home() {
           className={`${
             gender === "male"
               ? "bg-black opacity-95 text-white"
-              : "bg-[#DD1619] text-[#F6CC6F]"
+              : "bg-[#B4846C] text-black"
           } sm:text-center `}
         >
           <Hero sex={gender} />

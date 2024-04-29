@@ -3,7 +3,11 @@ import { Props } from "./Nav";
 
 const LookBook: React.FC<Props> = (props) => {
   return (
-    <div className={`p-6 md:p-8 lg:p-10 md:py-10 lg:py-16 flex flex-col gap-4 sm:gap-6 md:gap-8 lg:gap-10 ${props.sex === 'male' ? '' : 'bg-[#581c22c9]'}`}>
+    <div
+      className={`p-6 md:p-8 lg:p-10 md:py-10 lg:py-16 flex flex-col gap-4 sm:gap-6 md:gap-8 lg:gap-10 ${
+        props.sex === "male" ? "" : "bg-[#7D5A50]"
+      }`}
+    >
       <h2 className="font-bold text-3xl lg:text-5xl uppercase">LookBook</h2>
       <h5 className="text-white">
         Taking the art of barbering to another level, À-ONÈ presents you with a
@@ -13,7 +17,6 @@ const LookBook: React.FC<Props> = (props) => {
         to feel the atmosphere and passion that define À-ONÈ.
       </h5>
       <div className="flex flex-col contain-content sm:flex-row flex-wrap justify-evenly gap-4 lg:gap-8">
-        <div className="absolute bg-[#d9d9d933] rounded-full blur-[100px] h-[420px] left-[calc(50.01966181675189% - 1956px / 2)] pointer-events-none top-[calc(52.67034990791899% - 420px / 2)] rotate-[-7deg] w-[1956px] z-0 " />
         <div
           className={`${
             props.sex === "male"

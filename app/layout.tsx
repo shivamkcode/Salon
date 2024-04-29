@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import React, { useState } from "react";
 import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,7 +16,12 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+
+      <body className={`${inter.className} ${
+            gender === "male"
+              ? "bg-black opacity-95 text-white"
+              : "bg-[#B4846C] text-black"
+          } sm:text-center `}>
         {gender === "both" && (
           <>
             <div className="h-full w-full bg-black opacity-70 filter backdrop-blur-3xl fixed top-0 left-0 z-50" />
@@ -52,6 +58,7 @@ export default function RootLayout({
         <GenderContext.Provider value={gender}>
           {children}
         </GenderContext.Provider>
+        {gender !== "both" && <Footer sex={gender} />}
       </body>
     </html>
   );
