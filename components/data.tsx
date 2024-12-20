@@ -65,7 +65,7 @@ export const reviewsMen = [
     },
   ];
 
-  export const reviewsWomen = [
+export const reviewsWomen = [
     {
       id: 1,
       author: "Dharii V.",
@@ -131,3 +131,153 @@ export const reviewsMen = [
         "https://res.cloudinary.com/ddmxmmot6/image/upload/v1714139677/vsco_032624_lxsasv.jpg",
     },
   ];
+
+export const menuMen = [
+  {
+    id: 1,
+    name: "Classic Haircut",
+    price: 20,
+    description: "A timeless haircut, adapted to the contours of your face and personal style."
+  },
+  {
+    id: 2,
+    name: "Traditional Shaving",
+    price: 30,
+    description: "An authentic shave with attention to detail, for a fresh and invigorating feeling."
+  },
+  {
+    id: 3,
+    name: "Modern Styling",
+    price: 25,
+    description: "An authentic shave with attention to detail, for a fresh and invigorating feeling."
+  },
+  {
+    id: 4,
+    name: "Washing and Hair Massage",
+    price: 15,
+    description: "A relaxing experience with professional washing and hair massage for revitalization."
+  },
+  {
+    id: 5,
+    name: "Hair and Men Treatments",
+    price: 30,
+    description: "High quality hair and beard care products tailored to your needs."
+  },
+  {
+    id: 6,
+    name: "Chin Contouring and Sculpting",
+    price: 15,
+    description: "Define your facial contour with precise chin sculpting."
+  },
+  {
+    id: 7,
+    name: "Haircut for Children",
+    price: 15,
+    description: "A fun and friendly experience for the little ones, with haircuts adapted to their age."
+  },
+  {
+    id: 8,
+    name: "Hair Dye",
+    price: 25,
+    description: "Add a touch of color or change your look with professional painting services."
+  },
+  {
+    id: 9,
+    name: "Haircut and Shaving",
+    price: 40,
+    description: "A luxurious preparation for special occasions such as weddings or parties."
+  },
+  {
+    id: 10,
+    name: "Military Haircut",
+    price: 15,
+    description: "A clean and precise option for those who prefer a military look."
+  },
+  {
+    id: 11,
+    name: "Facial Massage with Natural ",
+    price: 25,
+    description: "Relaxation and care for your skin with a personalized facial massage."
+  },
+  {
+    id: 12,
+    name: "Haircut and Custom Shave",
+    price: 35,
+    description: "An individualized experience for a look perfectly adapted to your style."
+  },
+]
+
+export const menuWomen = [
+  {
+    id: 1,
+    name: "Professional makeup application",
+    price: 150,
+    description: "This appointment includes a consultation, skin preparation, and the application of makeup tailored to the client's preferences."
+  },
+  {
+    id: 2,
+    name: "Brow shaping",
+    price: 30,
+    description: "A fundamental service that includes consultation, trimming, waxing or threading, and finishing touches."
+  },
+  {
+    id: 3,
+    name: "Classic lash extensions",
+    price: 100,
+    description: "A classic lash extension service typically involves applying individual synthetic lashes for a fuller look."
+  },
+  {
+    id: 4,
+    name: "Full body waxing",
+    price: 60,
+    description: "Waxing services range from small areas to full body treatments, which typically include arms, legs, underarms, and bikini areas"
+  },
+  {
+    id: 5,
+    name: "Women's haircut and style",
+    price: 45,
+    description: "A standard women's haircut service usually includes a consultation, shampoo, cut, and blow-dry styling."
+  },
+  {
+    id: 6,
+    name: "Custom spray tanning",
+    price: 60,
+    description: "Offers a quick and safe way to achieve a sun-kissed glow. A custom spray tan includes a consultation to choose the right shade and the application of the tanning solution."
+  },
+  {
+    id: 7,
+    name: "Gel manicure",
+    price: 40,
+    description: "A gel manicure includes nail shaping, cuticle care, and the application of gel polish that cures under UV light for long-lasting results. "
+  },
+  {
+    id: 8,
+    name: "Advanced skincare treatments",
+    price: 150,
+    description: "Advanced skincare treatments, such as microdermabrasion, chemical peels, and hydra facials, cater to clients seeking specialized care for their skin."
+  },
+  {
+    id: 9,
+    name: "Hair extensions",
+    price: 250,
+    description: "Hair extension services are perfect for clients looking to add length, volume, or color to their hair. This service includes a consultation to select the type of extensions (tape-in, clip-in, micro-bead, or keratin bond), application, and styling."
+  },
+  {
+    id: 10,
+    name: "Keratin and Brazilian blowouts",
+    price: 200,
+    description: "Keratin and Brazilian blowout treatments provide clients with smooth, frizz-free hair. The service includes a consultation, treatment application, and aftercare instructions."
+  },
+  {
+    id: 11,
+    name: "Specialty hair coloring",
+    price: 150,
+    description: "Specialty hair coloring services offer clients unique and high-fashion color options, including balayage, ombre, color melting, and vivid colors."
+  },
+  {
+    id: 12,
+    name: "Anti-aging treatments",
+    price: 200,
+    description: "Anti-aging treatments offer advanced solutions for fine lines, wrinkles, and skin elasticity, including dermal fillers, non-surgical facelifts, radio frequency skin tightening, chemical peels, laser resurfacing, and collagen induction therapy."
+  },
+]

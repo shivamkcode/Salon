@@ -1,5 +1,5 @@
 import React from "react";
-import { Props } from "./Nav";
+import { Props } from "./Footer";
 
 const LookBook: React.FC<Props> = (props) => {
   return (

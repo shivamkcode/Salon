@@ -1,12 +1,17 @@
 import React from "react";
-import { Props } from "./Nav";
 import Link from "next/link";
 
+export interface Props {
+  sex: string;
+}
+
 const Footer: React.FC<Props> = (props) => {
+  const gender = localStorage.getItem("gender")
+
   return (
     <footer className={`p-6 md:p-8 py-10 md:py-14 lg:p-10 lg:py-20 border-t flex flex-col gap-2`}>
       <h1 className="font-bold text-3xl lg:text-5xl uppercase">
-        {props.sex === "male" ? "À-ONÈ" : "ÀYÈSHÀ_"}
+        {gender === "male" ? "À-ONÈ" : "ÀYÈSHÀ_"}
       </h1>
       <h5 className="text-white">
         Discover an unforgettable experience where style meets tradition.
@@ -22,7 +27,7 @@ const Footer: React.FC<Props> = (props) => {
           >
             <path
               className={`${
-                props.sex === "male"
+                gender === "male"
                   ? "group-hover:stroke-black"
                   : "stroke-[#fdfbcce7] group-hover:stroke-[#DD1619]"
               } stroke-[#fdfbcce7]`}
@@ -34,7 +39,7 @@ const Footer: React.FC<Props> = (props) => {
             />
             <path
               className={`${
-                props.sex === "male"
+                gender === "male"
                   ? "group-hover:stroke-black"
                   : "group-hover:stroke-[#DD1619]"
               } stroke-[#fdfbcce7]`}
@@ -46,7 +51,7 @@ const Footer: React.FC<Props> = (props) => {
             />
             <path
               className={`${
-                props.sex === "male"
+                gender === "male"
                   ? "group-hover:stroke-black"
                   : "group-hover:stroke-[#DD1619]"
               } stroke-[#fdfbcce7]`}
@@ -61,7 +66,7 @@ const Footer: React.FC<Props> = (props) => {
         <div className="p-1 w-full border-2 border-[#fdfbcce7] flex justify-center cursor-pointer items-center group hover:bg-[#fdfbcce7]">
           <svg
             className={`${
-              props.sex === "male"
+              gender === "male"
                 ? "group-hover:fill-black"
                 : "group-hover:fill-[#DD1619]"
             } `}
@@ -73,7 +78,7 @@ const Footer: React.FC<Props> = (props) => {
           >
             <path
               className={`${
-                props.sex === "male"
+                gender === "male"
                   ? " group-hover:stroke-black"
                   : "group-hover:stroke-[#DD1619]"
               } stroke-none`}
@@ -88,7 +93,7 @@ const Footer: React.FC<Props> = (props) => {
         <div className="p-1 w-full border-2 border-[#fdfbcce7] flex justify-center cursor-pointer items-center group hover:bg-[#fdfbcce7]">
           <svg
             className={`${
-              props.sex === "male"
+              gender === "male"
                 ? "group-hover:fill-black"
                 : "group-hover:fill-[#DD1619]"
             } `}
@@ -100,7 +105,7 @@ const Footer: React.FC<Props> = (props) => {
           >
             <path
               className={`${
-                props.sex === "male"
+                gender === "male"
                   ? "group-hover:stroke-black"
                   : "group-hover:stroke-[#DD1619]"
               } `}
@@ -112,7 +117,7 @@ const Footer: React.FC<Props> = (props) => {
             />
             <path
               className={`${
-                props.sex === "male" ? "stroke-black " : "stroke-[#DD1619] "
+                gender === "male" ? "stroke-black " : "stroke-[#DD1619] "
               } group-hover:stroke-[#fdfbcce7]`}
               d="M10 15L15 12L10 9V15Z"
               stroke="black"
@@ -125,7 +130,7 @@ const Footer: React.FC<Props> = (props) => {
         <div className="p-1 w-full border-2 border-[#fdfbcce7] flex justify-center cursor-pointer items-center group hover:bg-[#fdfbcce7]">
           <svg
             className={`${
-              props.sex === "male"
+              gender === "male"
                 ? "group-hover:fill-black"
                 : "group-hover:fill-[#DD1619]"
             } `}
@@ -137,7 +142,7 @@ const Footer: React.FC<Props> = (props) => {
           >
             <path
               className={`${
-                props.sex === "male"
+                gender === "male"
                   ? "group-hover:stroke-black"
                   : "group-hover:stroke-[#DD1619]"
               } stroke-[#fdfbcce7]`}
@@ -188,56 +193,56 @@ const Footer: React.FC<Props> = (props) => {
         <div className="grid grid-cols-3 grid-rows-4 gap-4 lg:gap-8 h-[90vw]">
           <div
             className={`${
-              props.sex === "male"
+              gender === "male"
                 ? "bg-[url(https://res.cloudinary.com/ddmxmmot6/image/upload/v1714133319/IMG_COM_20240426_0801_29_3421_fu70re.jpg)]"
                 : "bg-[url(https://i.ibb.co/rQZNwC8/IMG-20220829-WA0018.jpg)]"
             } bg-cover bg-no-repeat bg-center border-gray-600 border filter grayscale-0 hover:grayscale transition duration-500`}
           />
           <div
             className={`${
-              props.sex === "male"
+              gender === "male"
                 ? "bg-[url(https://res.cloudinary.com/ddmxmmot6/image/upload/v1714133320/IMG_COM_20240425_2017_37_3631_dmg3vn.jpg)]"
                 : "bg-[url(https://i.ibb.co/qsGmktp/IMG-20220829-WA0019.jpg)]"
             } bg-cover bg-no-repeat bg-center border-gray-600 border filter grayscale-0 hover:grayscale transition duration-500 row-span-2`}
           />
           <div
             className={`${
-              props.sex === "male"
+              gender === "male"
                 ? "bg-[url(https://res.cloudinary.com/ddmxmmot6/image/upload/v1714133320/IMG_COM_20240426_0805_53_9911_ecssje.jpg)]"
                 : "bg-[url(https://res.cloudinary.com/ddmxmmot6/image/upload/v1714138854/three_gsdrfv.jpg)]"
             } bg-cover bg-no-repeat bg-center border-gray-600 border filter grayscale-0 hover:grayscale transition duration-500`}
           />
           <div
             className={`${
-              props.sex === "male"
+              gender === "male"
                 ? "bg-[url(https://res.cloudinary.com/ddmxmmot6/image/upload/v1714326088/firza-pratama-zRshOvj0K4o-unsplash_w7h9vf.jpg)]"
                 : "bg-[url(https://res.cloudinary.com/ddmxmmot6/image/upload/v1714138853/six_djsouq.jpg)]"
             } bg-cover bg-no-repeat bg-center border-gray-600 border filter grayscale-0 hover:grayscale transition duration-500 row-span-2`}
           />
           <div
             className={`${
-              props.sex === "male"
+              gender === "male"
                 ? "bg-[url(https://res.cloudinary.com/ddmxmmot6/image/upload/v1714133320/IMG_COM_20240426_0805_08_2881_abtz4x.jpg)]"
                 : "bg-[url(https://res.cloudinary.com/ddmxmmot6/image/upload/v1714138851/four_a6kygx.jpg)]"
             } bg-cover bg-no-repeat bg-center border-gray-600 border filter grayscale-0 hover:grayscale transition duration-500 row-span-2`}
           />
           <div
             className={`${
-              props.sex === "male"
+              gender === "male"
                 ? "bg-[url(https://res.cloudinary.com/ddmxmmot6/image/upload/v1714133319/IMG_COM_20240426_0803_56_5331_zigxgw.jpg)]"
                 : "bg-[url(https://res.cloudinary.com/ddmxmmot6/image/upload/v1714138850/five_ldhrz7.jpg)]"
             } bg-cover bg-no-repeat bg-center border-gray-600 border filter grayscale-0 hover:grayscale transition duration-500 row-span-2`}
           />
           <div
             className={`${
-              props.sex === "male"
+              gender === "male"
                 ? "bg-[url(https://res.cloudinary.com/ddmxmmot6/image/upload/v1714133319/IMG_COM_20240426_0802_16_7971_nmksl7.jpg)]"
                 : "bg-[url(https://res.cloudinary.com/ddmxmmot6/image/upload/v1714139441/vsco_041924_rgrugo.jpg)]"
             } bg-cover bg-no-repeat bg-center border-gray-600 border filter grayscale-0 hover:grayscale transition duration-500`}
           />
           <div
             className={`${
-              props.sex === "male"
+              gender === "male"
                 ? "bg-[url(https://res.cloudinary.com/ddmxmmot6/image/upload/v1714133319/IMG_COM_20240426_0803_21_7691_sugwdl.jpg)]"
                 : "bg-[url(https://res.cloudinary.com/ddmxmmot6/image/upload/v1714139677/george-bohunicky-qJKT2rMU0VU-unsplash_1_twowu6.jpg)]"
             } bg-cover bg-no-repeat bg-center border-gray-600 border filter grayscale-0 hover:grayscale transition duration-500`}

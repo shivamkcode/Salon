@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { Props } from "./Nav";
+import { Props } from "./Footer";
 
 const InfoSection: React.FC<Props> = (props) => {
   return (
@@ -9,7 +9,7 @@ const InfoSection: React.FC<Props> = (props) => {
       <div className="flex flex-col gap-2 md:gap-3 lg:gap-4  items-center">
         <svg className="w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12"
           width="24"
-          height="24"
+          height="24" 
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -80,8 +80,8 @@ const InfoSection: React.FC<Props> = (props) => {
           />
         </svg>
         <h2 className="font-bold text-2xl lg:text-4xl uppercase">Contact</h2>
-        <h3 className="text-[#fff]">Phone number</h3>
-        <h3 className="text-[#fff]">Email</h3>
+        <h3 className="text-[#fff]">226-(xxx)-1234</h3>
+        <h3 className="text-[#fff]">abcd@xyz.com</h3>
       </div>
     </div>
   );

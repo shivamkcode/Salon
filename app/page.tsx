@@ -1,5 +1,4 @@
 "use client";
-import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import InfoSection from "@/components/InfoSection";
 import LookBook from "@/components/LookBook";
@@ -10,7 +9,7 @@ import { GenderContext } from "./layout";
 
 export default function Home() {
   const gender = useContext(GenderContext);
-  console.log(gender);
+  
   return (
     <>
       {gender && (
@@ -18,7 +17,7 @@ export default function Home() {
           className={`${
             gender === "male"
               ? "bg-black opacity-95 text-white"
-              : "bg-[#B4846C] text-black"
+              : "bg-[#595959] text-black"
           } sm:text-center `}
         >
           <Hero sex={gender} />
@@ -56,7 +55,7 @@ export default function Home() {
                   >
                     100+
                   </h2>
-                  <h2 className="text-2xl">Saisfied Customers</h2>
+                  <h2 className="text-2xl">Satisfied Customers</h2>
                 </div>
               </div>
             </div>
@@ -67,23 +66,11 @@ export default function Home() {
                   : "bg-[url(https://res.cloudinary.com/ddmxmmot6/image/upload/v1714233375/shari-sirotnak-oM5YoMhTf8E-unsplash_pje8rw.jpg)] opacity-80"
               } bg-cover bg-no-repeat bg-center border filter grayscale hover:grayscale-0 transition duration-500`}
             >
-              {/* <Image 
-                className="w-full h-full border"
-                src={
-                  gender === "female"
-                    ? "https://res.cloudinary.com/ddmxmmot6/image/upload/v1714233375/shari-sirotnak-oM5YoMhTf8E-unsplash_pje8rw.jpg"
-                    : "https://res.cloudinary.com/ddmxmmot6/image/upload/v1714133319/IMG_COM_20240426_0803_56_5331_zigxgw.jpg"
-                }
-                alt="image"
-                width={500}
-                height={500}
-              /> */}
             </div>
           </div>
           <Services sex={gender} />
           <Reviews sex={gender} />
           <LookBook sex={gender} />
-          <Footer sex={gender} />
         </main>
       )}
     </>

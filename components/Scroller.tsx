@@ -33,14 +33,14 @@ const HorizontalScroll: React.FC<ReviewsProps> = ({
 
       const scrollWidth = scrollElement.scrollWidth;
 
-      let scrollPos = direction === 'right' ? 0 : scrollWidth;
+      let scrollPos = direction === "right" ? 0 : scrollWidth;
       const scrollInterval = setInterval(() => {
         scrollPos += direction === "right" ? currentSpeed : -currentSpeed;
 
         if (scrollPos >= scrollWidth) {
           scrollPos = 0;
         } else if (scrollPos <= 0) {
-          scrollPos = scrollWidth
+          scrollPos = scrollWidth;
         }
 
         scrollElement.scrollLeft = scrollPos;
@@ -57,10 +57,7 @@ const HorizontalScroll: React.FC<ReviewsProps> = ({
 
   return (
     <div className="">
-      <div
-        ref={scrollRef}
-        className="no-scrollbar overflow-x-scroll "
-      >
+      <div ref={scrollRef} className="no-scrollbar overflow-x-scroll ">
         <div className="flex text-left cursor-grab">
           {reviews.map((review) => (
             <div
@@ -90,9 +87,8 @@ const HorizontalScroll: React.FC<ReviewsProps> = ({
                 <Image
                   src={review.image}
                   alt={`author-${reviews}`}
-                  layout="fill"
-                  objectFit="cover"
-                  objectPosition="center"
+                  fill
+                  style={{ objectFit: "cover" }}
                 />
               </div>
             </div>
@@ -125,15 +121,12 @@ const HorizontalScroll: React.FC<ReviewsProps> = ({
                 <Image
                   src={review.image}
                   alt={`author-${reviews}`}
-                  layout="fill"
-                  objectFit="cover"
-                  objectPosition="center"
+                  fill
+                  style={{ objectFit: "cover" }}
                 />
               </div>
             </div>
           ))}
-          
-          
         </div>
       </div>
     </div>

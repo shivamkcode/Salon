@@ -1,7 +1,7 @@
 import React from "react";
-import { Props } from "./Nav";
 import HorizontalScroll from "./Scroller";
 import { reviewsMen, reviewsWomen } from "./data";
+import { Props } from "./Footer";
 
 const Reviews: React.FC<Props> = (props) => {
   return (
@@ -22,7 +22,7 @@ const Reviews: React.FC<Props> = (props) => {
       <div
         className={`my-10 flex flex-col gap-10 mask contain-content`}
       >
-        <div className={`absolute ${props.sex === 'male' ? 'bg-[#d9d9d916]' : 'bg-[#75000ca9]'} rounded-full blur-[100px] h-[420px] left-[calc(50.01966181675189% - 1956px / 2)] pointer-events-none top-[calc(52.67034990791899% - 420px / 2)] rotate-[-7deg] w-[1956px] -z-10`} />
+        <div className={`absolute ${props.sex === 'male' ? 'bg-[#d9d9d92f]' : 'bg-[#75000ca9]'} rounded-full blur-[100px] h-[520px] left-[calc(50.01966181675189% - 1956px / 2)] pointer-events-none top-[calc(52.67034990791899% - 520px / 2)] rotate-[-7deg] w-[1956px] -z-10`} />
         <HorizontalScroll reviews={reviewsMen} direction="left" />
         <HorizontalScroll reviews={reviewsWomen} />
       </div>
