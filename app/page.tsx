@@ -12,7 +12,7 @@ export default function Home() {
   
   return (
     <>
-      {gender && (
+      {(gender && gender !== 'none') && (
         <main
           className={`${
             gender === "male"
