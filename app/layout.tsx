@@ -14,12 +14,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [gender, setGender] = useState<string>("none");
+  const [gender, setGender] = useState<string | null>("none");
 
   useEffect(() => {
     const storedGender = localStorage.getItem("gender");
     if (storedGender) {
       setGender(storedGender);
+    } else {
+      setGender(null)
     }
   }, []);
 
@@ -37,7 +39,7 @@ export default function RootLayout({
             : "bg-[#B4846C] text-black"
         } sm:text-center `}
       >
-        {gender === "none" && (
+        {!gender && (
           <>
             <div className="h-full w-full bg-black opacity-70 filter backdrop-blur-3xl fixed top-0 left-0 z-50" />
             <div className="bg-white fixed w-[80vw] sm:w-[500px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-lg flex flex-col gap-2 p-8 text-center z-50">
