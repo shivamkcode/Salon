@@ -9,7 +9,7 @@ const ServiceItem: React.FC<ItemProps> = ({ item }) => {
 
   return (
     <div
-      className={`flex flex-col bg-white opacity-95 text-black w-[100%] sm:w-[48%] lg:w-[31%] border-gray-600 border p-4 md:p-8 text-start gap-6 rounded-xl rounded-tl-none rounded-br-none`}
+      className={`flex flex-col bg-white opacity-95 text-black w-[100%] sm:w-[48%] lg:w-[31%] border-gray-600 border p-4 md:p-8 text-start gap-6 rounded-xl rounded-tl-none rounded-br-none contain-content`}
     >
       <div
         className={`absolute ${
