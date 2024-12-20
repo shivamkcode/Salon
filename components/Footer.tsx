@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 export interface Props {
-  sex: string;
+  sex: string | null;
 }
 
 const Footer: React.FC<Props> = (props) => {
@@ -165,25 +165,25 @@ const Footer: React.FC<Props> = (props) => {
         </Link>
         <Link
           className="border rounded-tl-none rounded-br-none rounded-xl md:w-60 p-2 text-center hover:border-[#F6CC6F] hover:text-[#F6CC6F] hover:scale-95"
-          href={"/"}
+          href={"/about"}
         >
           About
         </Link>
         <Link
           className="border rounded-tl-none rounded-br-none rounded-xl md:w-60 p-2 text-center hover:border-[#F6CC6F] hover:text-[#F6CC6F] hover:scale-95"
-          href={"/"}
+          href={"/services"}
         >
           Services
         </Link>
         <Link
           className="border rounded-tl-none rounded-br-none rounded-xl md:w-60 p-2 text-center hover:border-[#F6CC6F] hover:text-[#F6CC6F] hover:scale-95"
-          href={"/"}
+          href={"/gallery"}
         >
           Gallery
         </Link>
         <Link
           className="border rounded-tl-none rounded-br-none rounded-xl md:w-60 p-2 text-center hover:border-[#F6CC6F] hover:text-[#F6CC6F] hover:scale-95"
-          href={"/"}
+          href={"/contact"}
         >
           Contact
         </Link>

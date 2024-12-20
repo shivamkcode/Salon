@@ -1,5 +1,5 @@
 "use client";
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { GenderContext } from "../layout";
 import { menuMen, menuWomen } from "@/components/data";
 import ServiceItem from "@/components/ServiceItem";
@@ -8,11 +8,16 @@ import InfoSection from "@/components/InfoSection";
 const Service = () => {
   const gender = useContext(GenderContext);
 
+  useEffect(() => {
+    document.title =
+      gender === "male" ? "À-ONÈ | Services" : "ÀYÈSHÀ_ | Services";
+  }, [gender]);
+
   return (
     <div
       className={`${
         gender === "male" ? "bg-black" : "bg-[#fc666980]"
-      } p-6 md:p-8 lg:p-10 md:py-10 lg:py-16 flex flex-col gap-6 lg:gap-10`}
+      } text-white p-6 md:p-8 lg:p-10 md:py-10 lg:py-16 flex flex-col gap-6 lg:gap-10`}
     >
       <h1 className="text-5xl uppercase font-thin">Our Services</h1>
       <p className="opacity-70 tracking-wide lg:w-[80vw] mx-auto">

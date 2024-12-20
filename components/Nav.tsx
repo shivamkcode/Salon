@@ -6,7 +6,7 @@ import Male from "../public/img/male_icon.png";
 import Female from "../public/img/female_icon.png";
 
 interface Props {
-  sex: string;
+  sex: string | null;
   handleGenderSelect: any;
 }
 
@@ -37,7 +37,7 @@ const Nav: React.FC<Props> = (props) => {
             className={`${
               props.sex === "male"
                 ? "bg-black border-white"
-                : "bg-[#fff] border-white"
+                : "bg-[#fff] border-[#483C32]"
             } cursor-pointer hover:border-b-2 hover:scale-105`}
             href={`/about`}
           >
@@ -47,7 +47,7 @@ const Nav: React.FC<Props> = (props) => {
             className={`${
               props.sex === "male"
                 ? "bg-black border-white"
-                : "bg-[#fff] border-white"
+                : "bg-[#fff] border-[#483C32]"
             } cursor-pointer hover:border-b-2 hover:scale-105`}
             href={`/services`}
           >
@@ -57,7 +57,7 @@ const Nav: React.FC<Props> = (props) => {
             className={`${
               props.sex === "male"
                 ? "bg-black border-white"
-                : "bg-[#fff] border-white"
+                : "bg-[#fff] border-[#483C32]"
             } cursor-pointer hover:border-b-2 hover:scale-105`}
             href={`/gallery`}
           >
@@ -67,9 +67,9 @@ const Nav: React.FC<Props> = (props) => {
             className={`${
               props.sex === "male"
                 ? "bg-black border-white"
-                : "bg-[#fff] border-white"
+                : "bg-[#fff] border-[#483C32]"
             } cursor-pointer hover:border-b-2 hover:scale-105`}
-            href={`/contact/${props.sex}`}
+            href={`/contact`}
           >
             <h3>Contact</h3>
           </Link>
@@ -217,7 +217,7 @@ const Nav: React.FC<Props> = (props) => {
           <Link
             className={`border-white cursor-pointer p-2 hover:border-b-2 hover:scale-105`}
             onClick={() => setIsOpen(false)}
-            href={`/contact/${props.sex}`}
+            href={`/contact`}
           >
             <h3>Contact</h3>
           </Link>

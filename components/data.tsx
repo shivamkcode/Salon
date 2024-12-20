@@ -281,3 +281,73 @@ export const menuWomen = [
     description: "Anti-aging treatments offer advanced solutions for fine lines, wrinkles, and skin elasticity, including dermal fillers, non-surgical facelifts, laser resurfacing, and collagen induction therapy."
   },
 ]
+
+export const menImages =[
+  {
+    id : 1,
+    url: "https://res.cloudinary.com/ddmxmmot6/image/upload/v1714133319/IMG_COM_20240426_0801_29_3421_fu70re.jpg"
+  },
+  {
+    id : 2,
+    url: "https://res.cloudinary.com/ddmxmmot6/image/upload/v1714133320/IMG_COM_20240425_2017_37_3631_dmg3vn.jpg"
+  },
+  {
+    id : 3,
+    url: "https://res.cloudinary.com/ddmxmmot6/image/upload/v1714133320/IMG_COM_20240426_0805_53_9911_ecssje.jpg"
+  },
+  {
+    id : 4,
+    url: "https://res.cloudinary.com/ddmxmmot6/image/upload/v1714326088/firza-pratama-zRshOvj0K4o-unsplash_w7h9vf.jpg"
+  },
+  {
+    id : 5,
+    url: "https://res.cloudinary.com/ddmxmmot6/image/upload/v1714133320/IMG_COM_20240426_0805_08_2881_abtz4x.jpg"
+  },
+  {
+    id : 6,
+    url: "https://res.cloudinary.com/ddmxmmot6/image/upload/v1714133319/IMG_COM_20240426_0803_56_5331_zigxgw.jpg"
+  },
+  {
+    id : 7,
+    url: "https://res.cloudinary.com/ddmxmmot6/image/upload/v1714133319/IMG_COM_20240426_0802_16_7971_nmksl7.jpg"
+  },
+  {
+    id : 8,
+    url: "https://res.cloudinary.com/ddmxmmot6/image/upload/v1714133319/IMG_COM_20240426_0803_21_7691_sugwdl.jpg"
+  },
+]
+
+export const womenImages =[
+  {
+    id : 1,
+    url: "https://i.ibb.co/rQZNwC8/IMG-20220829-WA0018.jpg"
+  },
+  {
+    id : 2,
+    url: "https://i.ibb.co/qsGmktp/IMG-20220829-WA0019.jpg"
+  },
+  {
+    id : 3,
+    url: "https://res.cloudinary.com/ddmxmmot6/image/upload/v1714138854/three_gsdrfv.jpg"
+  },
+  {
+    id : 4,
+    url: "https://res.cloudinary.com/ddmxmmot6/image/upload/v1714138853/six_djsouq.jpg"
+  },
+  {
+    id : 5,
+    url: "https://res.cloudinary.com/ddmxmmot6/image/upload/v1714138851/four_a6kygx.jpg"
+  },
+  {
+    id : 6,
+    url: "https://res.cloudinary.com/ddmxmmot6/image/upload/v1714138850/five_ldhrz7.jpg"
+  },
+  {
+    id : 7,
+    url: "https://res.cloudinary.com/ddmxmmot6/image/upload/v1714139441/vsco_041924_rgrugo.jpg"
+  },
+  {
+    id : 8,
+    url: "https://res.cloudinary.com/ddmxmmot6/image/upload/v1714139677/george-bohunicky-qJKT2rMU0VU-unsplash_1_twowu6.jpg"
+  },
+]
