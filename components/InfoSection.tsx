@@ -5,7 +5,7 @@ import { Props } from "./Footer";
 const InfoSection: React.FC<Props> = (props) => {
   return (
     <div className={`flex flex-col md:flex-row ${props.sex === 'male' ? 'bg-black text-white' : 'bg-[#E5B299]'} opacity-95 gap-8 p-6 md:p-8 md:py-14 lg:p-10 lg:py-20 justify-center md:justify-evenly items-center md:items-start text-center contain-content`}>
-      <div className={`absolute ${props.sex === 'male' ? 'bg-[#d9d9d916]' : 'bg-[#75000c65]'} rounded-full blur-[100px] h-[220px] left-[calc(50.01966181675189% - 1956px / 2)] pointer-events-none top-[calc(52.67034990791899% - 420px / 2)] rotate-[-7deg] w-[1956px] -z-10`} />
+      <div className={`absolute ${props.sex === 'male' ? 'bg-[#b9b9b92a]' : 'bg-[#75000c65]'} rounded-full blur-[100px] h-[220px] left-[calc(50.01966181675189% - 1956px / 2)] pointer-events-none top-[calc(52.67034990791899% - 420px / 2)] rotate-[-7deg] w-[1956px] -z-10`} />
       <div className="flex flex-col gap-2 md:gap-3 lg:gap-4  items-center">
         <svg className="w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12"
           width="24"

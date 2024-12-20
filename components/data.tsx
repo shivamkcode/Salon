@@ -278,6 +278,6 @@ export const menuWomen = [
     id: 12,
     name: "Anti-aging treatments",
     price: 200,
-    description: "Anti-aging treatments offer advanced solutions for fine lines, wrinkles, and skin elasticity, including dermal fillers, non-surgical facelifts, radio frequency skin tightening, chemical peels, laser resurfacing, and collagen induction therapy."
+    description: "Anti-aging treatments offer advanced solutions for fine lines, wrinkles, and skin elasticity, including dermal fillers, non-surgical facelifts, laser resurfacing, and collagen induction therapy."
   },
 ]

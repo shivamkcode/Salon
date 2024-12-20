@@ -59,7 +59,7 @@ const Nav: React.FC<Props> = (props) => {
                 ? "bg-black border-white"
                 : "bg-[#fff] border-white"
             } cursor-pointer hover:border-b-2 hover:scale-105`}
-            href={`/gallery/${props.sex}`}
+            href={`/gallery`}
           >
             <h3>Gallery</h3>
           </Link>
@@ -210,7 +210,7 @@ const Nav: React.FC<Props> = (props) => {
           <Link
             className={`border-white cursor-pointer p-2 hover:border-b-2 hover:scale-105`}
             onClick={() => setIsOpen(false)}
-            href={`/gallery/${props.sex}`}
+            href={`/gallery`}
           >
             <h3>Gallery</h3>
           </Link>
