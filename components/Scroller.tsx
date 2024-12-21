@@ -88,6 +88,7 @@ const HorizontalScroll: React.FC<ReviewsProps> = ({
                   src={review.image}
                   alt={`author-${reviews}`}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   style={{ objectFit: "cover" }}
                 />
               </div>
@@ -122,6 +123,7 @@ const HorizontalScroll: React.FC<ReviewsProps> = ({
                   src={review.image}
                   alt={`author-${reviews}`}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   style={{ objectFit: "cover" }}
                 />
               </div>

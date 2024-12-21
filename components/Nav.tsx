@@ -28,7 +28,7 @@ const Nav: React.FC<Props> = (props) => {
         }`}
       >
         <Link className="z-50" href={"/"}>
-          <h2 className="cursor-pointer text-2xl font-light tracking-widest">
+          <h2 className="cursor-pointer text-2xl font-light tracking-widest hover:scale-105">
             {props.sex === "male" ? "À-ONÈ" : "ÀYÈSHÀ_"}
           </h2>
         </Link>
@@ -194,28 +194,28 @@ const Nav: React.FC<Props> = (props) => {
       >
         <div className="flex flex-col gap-5 w-full">
           <Link
-            className={`border-white cursor-pointer p-2 hover:border-b-2 hover:scale-105`}
+            className={`${props.sex === 'male' ? "border-white" : "border-[#483C32]"} cursor-pointer p-2 hover:border-b-2 hover:scale-105`}
             onClick={() => setIsOpen(false)}
             href={`/about`}
           >
             <h3>About</h3>
           </Link>
           <Link
-            className={`border-white cursor-pointer p-2 hover:border-b-2 hover:scale-105`}
+            className={`${props.sex === 'male' ? "border-white" : "border-[#483C32]"} cursor-pointer p-2 hover:border-b-2 hover:scale-105`}
             onClick={() => setIsOpen(false)}
             href={`/services`}
           >
             <h3>Services</h3>
           </Link>
           <Link
-            className={`border-white cursor-pointer p-2 hover:border-b-2 hover:scale-105`}
+            className={`${props.sex === 'male' ? "border-white" : "border-[#483C32]"} cursor-pointer p-2 hover:border-b-2 hover:scale-105`}
             onClick={() => setIsOpen(false)}
             href={`/gallery`}
           >
             <h3>Gallery</h3>
           </Link>
           <Link
-            className={`border-white cursor-pointer p-2 hover:border-b-2 hover:scale-105`}
+            className={`${props.sex === 'male' ? "border-white" : "border-[#483C32]"} cursor-pointer p-2 hover:border-b-2 hover:scale-105`}
             onClick={() => setIsOpen(false)}
             href={`/contact`}
           >
@@ -224,7 +224,7 @@ const Nav: React.FC<Props> = (props) => {
         </div>
         <Link
           onClick={() => setIsOpen(false)}
-          className={`border-white w-full cursor-pointer p-2 hover:border-2 hover:scale-105`}
+          className={`${props.sex === 'male' ? "border-white" : "border-[#483C32]"} w-full cursor-pointer p-2 hover:border-2 hover:scale-105`}
           href={`/booking`}
         >
           <h2>Book An Appointment</h2>

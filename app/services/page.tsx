@@ -27,7 +27,7 @@ const Service = () => {
         champagne or a steaming hot tea while you and your Life-stylist craft a
         styling plan based on your unique wants and needs.
       </p>
-      <div className="flex flex-col sm:flex-row flex-wrap justify-evenly gap-4">
+      <div className="flex flex-col sm:flex-row flex-wrap justify-evenly gap-6">
         {(gender === "male" ? menuMen : menuWomen).map((item) => (
           <ServiceItem key={item.id} item={item} />
         ))}

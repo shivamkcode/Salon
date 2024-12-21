@@ -6,11 +6,13 @@ export interface Props {
 }
 
 const Footer: React.FC<Props> = (props) => {
-  const gender = localStorage.getItem("gender")
+  const gender = localStorage.getItem("gender");
 
   return (
-    <footer className={`p-6 md:p-8 py-10 md:py-14 lg:p-10 lg:py-20 border-t flex flex-col gap-2`}>
-      <h1 className="font-bold text-3xl lg:text-5xl uppercase">
+    <footer
+      className={`p-6 md:p-8 py-10 md:py-14 lg:p-10 lg:py-20 border-t flex flex-col gap-2`}
+    >
+      <h1 className="font-extralight text-3xl lg:text-5xl uppercase">
         {gender === "male" ? "À-ONÈ" : "ÀYÈSHÀ_"}
       </h1>
       <h5 className="text-white">
@@ -155,7 +157,7 @@ const Footer: React.FC<Props> = (props) => {
           </svg>
         </div>
       </div>
-      <h1 className="font-bold text-3xl lg:text-5xl uppercase">Useful Links</h1>
+      <h1 className="font-extralight text-3xl lg:text-5xl uppercase">Useful Links</h1>
       <div className="flex flex-col justify-center md:flex-row flex-wrap gap-6 py-6 md:py-10">
         <Link
           className="border rounded-tl-none rounded-br-none rounded-xl md:w-60 p-2 text-center hover:border-[#F6CC6F] hover:text-[#F6CC6F] hover:scale-95"
@@ -189,7 +191,7 @@ const Footer: React.FC<Props> = (props) => {
         </Link>
       </div>
       <div className="py-10 md:py-14 lg:py-20 flex flex-col gap-6 md:gap-8 lg:gap-10">
-      <h1 className="font-bold text-3xl lg:text-5xl uppercase">Gallery</h1>
+        <h1 className="font-extralight text-3xl lg:text-5xl uppercase">Gallery</h1>
         <div className="grid grid-cols-3 grid-rows-4 gap-4 lg:gap-8 h-[90vw]">
           <div
             className={`${
@@ -248,6 +250,10 @@ const Footer: React.FC<Props> = (props) => {
             } bg-cover bg-no-repeat bg-center border-gray-600 border filter grayscale-0 hover:grayscale transition duration-500`}
           />
         </div>
+      </div>
+      <div className="mt-6 text-center text-sm lg:text-lg text-white opacity-70">
+        &copy; {new Date().getFullYear()}{" "}
+        {gender === "male" ? "À-ONÈ" : "ÀYÈSHÀ_"}. All rights reserved.
       </div>
     </footer>
   );
