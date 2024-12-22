@@ -62,20 +62,7 @@ To run the project locally, follow these steps:
 
 ### Homepage
 
-![Homepage](https://res.cloudinary.com/ddmxmmot6/image/upload/v1734889889/bgwqajt3iqj9syfu6zcq.png)
-
-### About Page
-![About Page](https://res.cloudinary.com/ddmxmmot6/image/upload/v1734890315/About-Page_jykpde.png)
-
-### Services Page
-![Services Page](https://res.cloudinary.com/ddmxmmot6/image/upload/v1734890540/Services_gsoyld.png)
-
-### Gallery
-![Gallery](url-to-your-gallery-screenshot)
-
-### Booking Page
-![Booking Page](url-to-your-booking-page-screenshot)
-
+![Homepage](https://res.cloudinary.com/ddmxmmot6/image/upload/v1734892889/Homepage_gpqmn6.png)
 
 ## Contributing
 
@@ -104,4 +91,3 @@ The A-one_Ayesha Salon website is live! You can explore the features and service
 [https://a-oneayesha.vercel.app/](https://a-oneayesha.vercel.app/)
 
 Check it out to experience the full functionality of the website in both male and female versions.
-
