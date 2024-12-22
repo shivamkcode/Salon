@@ -40,16 +40,22 @@ To run the project locally, follow these steps:
 
 1. Clone the repository:
 
-   `git clone https://github.com/your-username/A-one_Ayesha_Salon.git`
-   `cd A-one_Ayesha_Salon`
+   ```bash
+   git clone https://github.com/your-username/A-one_Ayesha_Salon.git
+   cd A-one_Ayesha_Salon
+   ```
 
 2. Install Dependencies:
 
-   `npm Install`
+   ``` bash
+   npm Install
+   ```
 
 3. Run the development server:
 
-   `npm run dev`
+   ``` bash
+   npm run dev
+   ```
 
 4. Open your browser and navigate to `http://localhost:3000`
 
