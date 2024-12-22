@@ -9,9 +9,11 @@ A comprehensive and elegant salon website that allows users to switch between ma
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Screenshots](#screenshots)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
+- [Deployed Site](#deployed-site)
 
 ## Project Overview
 
