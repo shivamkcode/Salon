@@ -36,7 +36,7 @@ export default function MyApp() {
       *Please note: Online booking window is three months - to book beyond three months, please contact your stylist directly.
       </p>
       <Cal
-        calLink="darth-vader-xmqjwq/30min"
+        calLink="darth-vader-xmqjwq/salon-appointment"
         style={{ width: "100%", height: "100%", overflow: "auto" }}
         config={{ layout: "month_view" }}
       />

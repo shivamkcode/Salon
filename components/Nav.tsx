@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Hamburg from "../public/img/hamburg.png";
 import Male from "../public/img/male_icon.png";
 import Female from "../public/img/female_icon.png";
@@ -12,16 +12,48 @@ interface Props {
 
 const Nav: React.FC<Props> = (props) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isVisible, setIsVisible] = useState<boolean>(true);
+  const [lastScrollY, setLastScrollY] = useState<number>(0);
 
   const handleToggle = () => {
     props.handleGenderSelect(props.sex === "male" ? "female" : "male");
     localStorage.setItem("gender", props.sex === "male" ? "female" : "male");
   };
 
+  const controlNavbar = () => {
+    if (typeof window !== "undefined") {
+      if (window.scrollY > window.innerHeight) {
+        // Check if scrolled at least half the window height
+        if (window.scrollY > lastScrollY) {
+          setIsVisible(false); // Hide navbar on scroll down
+        } else {
+          setIsVisible(true); // Show navbar on scroll up
+        }
+      } else {
+        setIsVisible(true); // Ensure navbar is always visible above the threshold
+      }
+      setLastScrollY(window.scrollY);
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", controlNavbar);
+
+      // cleanup function
+      return () => {
+        window.removeEventListener("scroll", controlNavbar);
+      };
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lastScrollY]);
+
   return (
     <>
       <nav
-        className={`flex md:gap-2 sticky opacity-90 backdrop-blur-sm w-full top-0 left-0 justify-between items-center p-6 md:px-8 lg:px-10 font-bold z-40 ${
+        className={`flex md:gap-2 sticky opacity-90 backdrop-blur-sm w-full top-0 left-0 justify-between items-center p-6 md:px-8 lg:px-10 font-bold z-40 transition-transform duration-300 ${
+          isVisible ? "translate-y-0" : "-translate-y-full"
+        } ${
           props.sex == "male"
             ? "bg-black text-white"
             : " bg-[#fff] text-[#483C32]"
@@ -194,28 +226,36 @@ const Nav: React.FC<Props> = (props) => {
       >
         <div className="flex flex-col gap-5 w-full">
           <Link
-            className={`${props.sex === 'male' ? "border-white" : "border-[#483C32]"} cursor-pointer p-2 hover:border-b-2 hover:scale-105`}
+            className={`${
+              props.sex === "male" ? "border-white" : "border-[#483C32]"
+            } cursor-pointer p-2 hover:border-b-2 hover:scale-105`}
             onClick={() => setIsOpen(false)}
             href={`/about`}
           >
             <h3>About</h3>
           </Link>
           <Link
-            className={`${props.sex === 'male' ? "border-white" : "border-[#483C32]"} cursor-pointer p-2 hover:border-b-2 hover:scale-105`}
+            className={`${
+              props.sex === "male" ? "border-white" : "border-[#483C32]"
+            } cursor-pointer p-2 hover:border-b-2 hover:scale-105`}
             onClick={() => setIsOpen(false)}
             href={`/services`}
           >
             <h3>Services</h3>
           </Link>
           <Link
-            className={`${props.sex === 'male' ? "border-white" : "border-[#483C32]"} cursor-pointer p-2 hover:border-b-2 hover:scale-105`}
+            className={`${
+              props.sex === "male" ? "border-white" : "border-[#483C32]"
+            } cursor-pointer p-2 hover:border-b-2 hover:scale-105`}
             onClick={() => setIsOpen(false)}
             href={`/gallery`}
           >
             <h3>Gallery</h3>
           </Link>
           <Link
-            className={`${props.sex === 'male' ? "border-white" : "border-[#483C32]"} cursor-pointer p-2 hover:border-b-2 hover:scale-105`}
+            className={`${
+              props.sex === "male" ? "border-white" : "border-[#483C32]"
+            } cursor-pointer p-2 hover:border-b-2 hover:scale-105`}
             onClick={() => setIsOpen(false)}
             href={`/contact`}
           >
@@ -224,7 +264,9 @@ const Nav: React.FC<Props> = (props) => {
         </div>
         <Link
           onClick={() => setIsOpen(false)}
-          className={`${props.sex === 'male' ? "border-white" : "border-[#483C32]"} w-full cursor-pointer p-2 hover:border-2 hover:scale-105`}
+          className={`${
+            props.sex === "male" ? "border-white" : "border-[#483C32]"
+          } w-full cursor-pointer p-2 hover:border-2 hover:scale-105`}
           href={`/booking`}
         >
           <h2>Book An Appointment</h2>
