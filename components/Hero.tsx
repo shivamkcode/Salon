@@ -10,8 +10,8 @@ const Hero: React.FC<Props> = (props) => {
       className={`${
         male
           ? 'bg-[url("../public/img/Hero_men.jpg")] md:rounded-br-[150px]'
-          : "bg-[url('https://www.wallpapertip.com/wmimgs/13-132200_girl-red-hair-data-src-beauty-salon-images.jpg')]"
-      }  bg-cover bg-no-repeat h-screen lg:h-[60vw] bg-center text-white`}
+          : "bg-[url('https://res.cloudinary.com/ddmxmmot6/image/upload/v1739034223/3655x3109-red-long-hair-beautiful-woman-stock-photo-freedesignfile_n9qlmu.jpg')]"
+      }  bg-cover bg-no-repeat h-screen lg:h-[60vw] bg-top text-white`}
     >
       <div
         className={`flex flex-col gap-6 md:gap-8 lg:gap-10 h-full px-10 md:px-16 lg:px-28 ${
