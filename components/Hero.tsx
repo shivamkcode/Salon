@@ -9,8 +9,8 @@ const Hero: React.FC<Props> = (props) => {
     <section
       className={`${
         male
-          ? 'bg-[url("../public/img/Hero_men.jpg")] md:rounded-br-[150px]'
-          : "bg-[url('https://res.cloudinary.com/ddmxmmot6/image/upload/v1739034223/3655x3109-red-long-hair-beautiful-woman-stock-photo-freedesignfile_n9qlmu.jpg')]"
+          ? 'bg-[url("https://res.cloudinary.com/ddmxmmot6/image/upload/v1742363503/Hero_men_1_1_1_lalet4.webp")] md:rounded-br-[150px]'
+          : "bg-[url('https://res.cloudinary.com/ddmxmmot6/image/upload/v1742363110/3655x3109-red-long-hair-beautiful-woman-stock-photo-freedesignfile_n9qlmu.webp')]"
       }  bg-cover bg-no-repeat h-screen lg:h-[60vw] bg-top text-white`}
     >
       <div
