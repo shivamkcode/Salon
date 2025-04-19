@@ -41,7 +41,7 @@ To run the project locally, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/A-one_Ayesha_Salon.git
+   git clone https://github.com/shivamkcode/A-one_Ayesha_Salon.git
    cd A-one_Ayesha_Salon
    ```
 
@@ -96,6 +96,6 @@ Project Link: [https://github.com/shivamkcode/Salon](https://github.com/shivamkc
 
 The A-one_Ayesha Salon website is live! You can explore the features and services provided by visiting the deployed site at:
 
-[https://a-oneayesha.vercel.app/](https://a-oneayesha.vercel.app/)
+[https://salon.heyshivam.tech//](https://salon.heyshivam.tech//)
 
 Check it out to experience the full functionality of the website in both male and female versions.
